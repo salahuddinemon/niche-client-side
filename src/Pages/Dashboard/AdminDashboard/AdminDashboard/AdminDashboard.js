@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import useAuth from '../../../../hooks/useAuth';
 import {
-    BrowserRouter as Router,
     Switch,
     Route,
     Link,
@@ -17,16 +16,7 @@ import ManageProducts from '../ManageProducts/ManageProducts';
 
 const AdminDashboard = () => {
     let { path, url } = useRouteMatch();
-    const { user, logout } = useAuth();
-    // const [conditionalrender, setConditionalRender] = useState();
-
-    // useEffect(() => {
-    //     fetch('https://vast-plains-22065.herokuapp.com/users')
-    //         .then(res => res.json())
-    //         .then(data => setConditionalRender(data))
-    // }, [])
-
-    // const findOperation = conditionalrender.find(userRouting=> user.email === conditionalrender.email)
+    const { user, admin, logout } = useAuth();
     return (
         <div>
             <div className="h-screen w-full flex overflow-hidden">
@@ -76,17 +66,9 @@ const AdminDashboard = () => {
                         </span>
                     </div>
 
-
-
-
-
                     {/* users link  */}
-
-
-
                     <ul className="mt-2 text-gray-600">
-
-
+                        {/* {admin && */}
                         <div>
                             <li
                                 className="mt-8 shadow py-2 bg-white dark:bg-gray-200 rounded-lg		-ml-4">
@@ -153,6 +135,7 @@ const AdminDashboard = () => {
                                 </Link>
                             </li>
                         </div>
+                        {/* } */}
 
                         {/* admin link  */}
 
