@@ -6,7 +6,7 @@ import {
     faBars,
     faTimes,
 } from "@fortawesome/free-solid-svg-icons"
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
 
 const Navigation = () => {
@@ -14,14 +14,12 @@ const Navigation = () => {
     const [mobileOpen, setMobileOpen] = useState(false)
     return (
         <div>
-            {/* <nav
-                className="flex items-center justify-between flex-wrap bg-white py-4 lg:px-12 shadow border-solid border-t-2 border-blue-700">
-
-            </nav> */}
             <div className="flex items-center h-20 px-6 justify-between border-b border-gray-300 bg-blue-800 text-white relative z-50">
-                <div className="h-8">
-                    <img src={logo} alt="" />
-                </div>
+                <Link to='/home'>
+                    <div className="h-8">
+                        <img src={logo} alt="" />
+                    </div>
+                </Link>
                 <div className="flex-1 ml-10 items-center hidden lg:flex">
                     <NavLink to="/home" className="no-underline px-2 mr-3 text-gray-200 font-medium hover:text-blue-400"
                     >Home</NavLink>

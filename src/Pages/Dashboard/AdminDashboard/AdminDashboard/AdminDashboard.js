@@ -57,7 +57,7 @@ const AdminDashboard = () => {
                     </div>
 
 
-                    <button
+                    <div
                         className="mt-8 flex items-center justify-between py-3 px-2 text-white
 			dark:text-gray-200 bg-green-400 dark:bg-green-500 rounded-lg shadow">
                         {/* <!-- Action --> */}
@@ -74,7 +74,7 @@ const AdminDashboard = () => {
 						dark:text-gray-300">
                             dashboard
                         </span>
-                    </button>
+                    </div>
 
 
 
@@ -306,8 +306,8 @@ const AdminDashboard = () => {
                             </div>
 
                         </nav>
-                        <h2 className="my-4 text-4xl font-semibold dark:text-gray-400">
-                            User list
+                        <h2 className="my-4 text-4xl text-blue-400 font-semibold dark:text-gray-400">
+                            User Dashboard Panel
                         </h2>
                         <hr />
                         <Switch>

@@ -1,9 +1,10 @@
 import React from 'react';
-import Banner from '../../Shared/Banner/Banner'; import About from '../About/About';
-import Contact from '../Contact/Contact';
+import Banner from '../../Shared/Banner/Banner';
+import About from '../About/About';
 import DisplayReivew from '../DisplayReivew/DisplayReivew';
 import Products from '../Products/Products';
 import Subscribe from '../Subscribe/Subscribe';
+import ExtraFeatured from './ExtraFeatured/ExtraFeatured';
 
 
 const Home = () => {
@@ -12,7 +13,7 @@ const Home = () => {
             <Banner></Banner>
             <Products></Products>
             <About></About>
-            <Contact></Contact>
+            <ExtraFeatured></ExtraFeatured>
             <DisplayReivew></DisplayReivew>
             <Subscribe></Subscribe>
         </div>

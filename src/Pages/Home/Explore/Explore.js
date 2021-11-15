@@ -11,7 +11,8 @@ const Explore = () => {
 
     return (
         <div className="mx-2">
-
+            <h2 className="text-purple-900 font-bold text-6xl tracking-tight my-14">More Sunglasses Collection<hr />
+            </h2>
             {
                 products.map(product => <Product
                     key={product._id}

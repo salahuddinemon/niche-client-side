@@ -16,7 +16,8 @@ const Products = () => {
 
     return (
         <div className="mx-2">
-
+            <h2 className="text-purple-900 font-bold text-6xl tracking-tight my-14">Best Sunglasses Collection<hr />
+            </h2>
             {
                 homeProduct[0].map(product => <Product
                     key={product._id}
