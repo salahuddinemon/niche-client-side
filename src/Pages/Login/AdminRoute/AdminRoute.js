@@ -3,7 +3,7 @@ import { Route, Redirect } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
 
 const AdminRoute = ({ children, ...rest }) => {
-    const { user, isLoading } = useAuth();
+    const { user, admin, isLoading } = useAuth();
     if (!isLoading) {
         <svg class="animate-spin h-5 w-5 mr-3" viewBox="0 0 24 24"></svg>
     }
@@ -12,12 +12,12 @@ const AdminRoute = ({ children, ...rest }) => {
             <Route
                 {...rest}
                 render={({ location }) =>
-                    user.email ? (
+                    user.email && admin ? (
                         children
                     ) : (
                         <Redirect
                             to={{
-                                pathname: "/login",
+                                pathname: "/",
                                 state: { from: location }
                             }}
                         />
