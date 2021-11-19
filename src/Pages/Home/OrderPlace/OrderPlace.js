@@ -30,7 +30,6 @@ const OrderPlace = () => {
         }
 
         //send to the server
-        // console.log(completedOrder);
         fetch('https://vast-plains-22065.herokuapp.com/orders', {
             method: 'POST',
             headers: {
@@ -42,8 +41,9 @@ const OrderPlace = () => {
             .then(data => {
                 if (data.insertedId === true) {
                     setOrderSuccess(true)
-                    // alert('order Completed Succesfully')
-                    // {orderSuccess && swal("Good job!", "The product upload is done!", "success")};
+                    orderSuccess && alert('order Completed Succesfully')
+                    // orderSuccess && swal("Thank you!", "Your order successfully done!");
+
                 }
 
             })

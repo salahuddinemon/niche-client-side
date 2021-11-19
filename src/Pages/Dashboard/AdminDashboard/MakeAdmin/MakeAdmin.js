@@ -22,6 +22,7 @@ const MakeAdmin = () => {
             .then(data => {
                 if (data.modifiedCount) {
                     console.log(data);
+                    setEmail('');
                     setSuccess(true);
                     swal("Good job!", "This email is now admin!", "success")
                 }
@@ -34,7 +35,7 @@ const MakeAdmin = () => {
             <form onSubmit={handleAdminSubmit}>
                 <div>
                     <p className="text-lg font-medium leading-none text-gray-800">Make An Admin With Email</p> <br />
-                    <input onBlur={handleOnBlur} aria-label="enter email adress" type="email" name="email" className="bg-gray-200 border rounded focus:outline-none text-xs font-medium leading-none text-gray-800 py-3 w-2/5 pl-3 mt-2" />
+                    <input onBlur={handleOnBlur} aria-label="enter email adress" type="email" name="email" Value="Email" className="bg-gray-200 border rounded focus:outline-none text-xs font-medium leading-none text-gray-800 py-3 w-2/5 pl-3 mt-2" />
                 </div>
                 <div className="mt-8">
                     <button type="submit" className="focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 text-sm font-semibold leading-none text-white focus:outline-none bg-indigo-700 border rounded hover:bg-indigo-600 py-4 w-1/5">
